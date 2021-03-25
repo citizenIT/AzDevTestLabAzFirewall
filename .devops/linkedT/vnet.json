@@ -103,10 +103,6 @@
           {
             "name": "[parameters('subnet2Name')]",
             "properties": {
-              "networkSecurityGroup": {
-                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsg1Name'))]",
-                "location": "[variables('location')]"
-              },
               "addressPrefix": "[parameters('subnet2Prefix')]"
             }
           }

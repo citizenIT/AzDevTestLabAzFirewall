@@ -61,11 +61,25 @@
         "description": "Address prefix"
       }
     },
+    "subnet1Name": {
+      "type": "string",
+      "defaultValue": "snet1",
+      "metadata": {
+        "description": "Subnet 1 Name"
+      }
+    },
     "subnet1Prefix": {
       "type": "string",
       "defaultValue": "10.0.0.0/24",
       "metadata": {
         "description": "Subnet 1 Prefix"
+      }
+    },
+    "subnet2Name": {
+      "type": "string",
+      "defaultValue": "snet2",
+      "metadata": {
+        "description": "Subnet 2 Name"
       }
     },
     "subnet2Prefix": {
@@ -83,8 +97,6 @@
     },
 
     "vnetName": "[concat(parameters('projectName'),'-vnet')]",
-    "subnet1Name": "[concat(parameters('projectName'), '-snet1')]",
-    "subnet2Name": "[concat(parameters('projectName'), '-snet2')]",
     "nsg1Name": "[concat(parameters('projectName'), '-nsg1')]",
 
     "dtlDeploymenyName": "linkedTemplate-dtl",
@@ -130,10 +142,10 @@
             "value": "[variables('vnetName')]"
           },
           "subnet1Name": {
-            "value": "[variables('subnet1Name')]"
+            "value": "[parameters('subnet1Name')]"
           },
           "subnet2Name": {
-            "value": "[variables('subnet2Name')]"
+            "value": "[parameters('subnet2Name')]"
           }
         }
       },
@@ -165,13 +177,13 @@
             "value": "[parameters('vnetAddressPrefix')]"
           },
           "subnet1Name": {
-            "value": "[variables('subnet1Name')]"
+            "value": "[parameters('subnet1Name')]"
           },
           "subnet1Prefix": {
             "value": "[parameters('subnet1Prefix')]"
           },
           "subnet2Name": {
-            "value": "[variables('subnet2Name')]"
+            "value": "[parameters('subnet2Name')]"
           },
           "subnet2Prefix": {
             "value": "[parameters('subnet2Prefix')]"

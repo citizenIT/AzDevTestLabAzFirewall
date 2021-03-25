@@ -23,6 +23,6 @@ steps:
       location: 'East US 2'
       templateLocation: 'URL of the file'
       csmFileLink: '$(templateLink)'
-      overrideParameters: '-projectName $(projectName) -env $(env) -costThreshold $(costThreshold) -maxAllowedVmsPerUser $(maxAllowedVmsPerUser) -maxAllowedVmsPerLab $(maxAllowedVmsPerLab) -allowedVmSizes "$(allowedVmSizes)" -allowedBaseImages "$(allowedBaseImages)" -vnetAddressPrefix $(vnetAddressPrefix) -subnet1Prefix $(subnet1Prefix) -subnet2Prefix $(subnet2Prefix)'
+      overrideParameters: '-projectName $(projectName) -env $(env) -costThreshold $(costThreshold) -maxAllowedVmsPerUser $(maxAllowedVmsPerUser) -maxAllowedVmsPerLab $(maxAllowedVmsPerLab) -allowedVmSizes "$(allowedVmSizes)" -allowedBaseImages "$(allowedBaseImages)" -vnetAddressPrefix $(vnetAddressPrefix) -subnet1Name $(subnet1Name) -subnet1Prefix $(subnet1Prefix) -subnet2Name $(subnet2Name) -subnet2Prefix $(subnet2Prefix)'
       deploymentMode: 'Incremental'
       deploymentName: 'DeployDevTestLabARM'
